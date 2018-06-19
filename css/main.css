@@ -189,44 +189,6 @@ footer{
 /* FOOTER SECTION ENDS */
 
 
-/* MEDIA QUERIES */
-@media (min-width: 768px) {
-    .mobile-info{
-        display: none;
-    }
-
-    .mobile-celular{
-        display: none;
-    }
-
-    .container-map-graffy {
-        width: 420px;
-    }
-
-    .mobile-footer{
-        display: none;
-    }
-
-    .container-app a>img{
-        width: 150px;
-    }
- }
-
- @media (max-width: 768px){
-     .destok-info{
-         display: none;
-     }
-
-     .desktop-celular{
-         display: none;
-     }
-
-     .desktop-footer{
-         display: none;
-     }
-}
-/* MEDIA QUERIES END */
-
 /* OTHER STYLES */
 .header-style{
     background-color: #fff;
@@ -383,3 +345,42 @@ section.orange > div > div > div > div.col-md-5.col-md-offset-1 > p{
 h5{
     text-align: center;
 }
+
+/* MEDIA QUERIES */
+@media (min-width: 768px) { 
+    /* This means when the screen is bigger than 768px then this happens */
+    #mobile-info{
+        display: none;
+    }
+
+    #mobile-app{
+        display: none;
+    }
+
+    .container-map-box {
+        width: 420px;
+    }
+
+    .mobile-footer{
+        display: none;
+    }
+
+    .container-app a>img{
+        width: 150px;
+    }
+ }
+
+ @media (max-width: 768px){
+     #desktop-taxi{
+         display: none;
+     }
+
+     #desktop-phone-image{
+         display: none;
+     }
+
+     .desktop-footer{
+         display: none;
+     }
+}
+/* MEDIA QUERIES END */
