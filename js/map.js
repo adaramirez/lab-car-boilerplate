@@ -1,26 +1,27 @@
-/* Inicializa y agrega el mapa cuando se carga la página web */
+/* Starts and adds the map when the website is loaded */
+
 initMap = () => {
-    // variable para la ruta
+    // Variable for the Route
     var directionsService = new google.maps.DirectionsService;
     var directionsDisplay = new google.maps.DirectionsRenderer;
   
-    let laboratoriaLima = {
-      lat: -12.1260837,
-      lng: -77.0228761
+    let laboratoriaGdl = {
+      lat: 20.656932100000002,
+      lng: -103.39735449999999
     };
   
     let map = new google.maps.Map(document.getElementById('map'), {
       zoom: 12,
-      center: laboratoriaLima
+      center: laboratoriaGdl
     });
   
     let marker = new google.maps.Marker({
-      position: laboratoriaLima,
+      position: laboratoriaGdl,
       map: map,
       icon: 'assets/images/car.png'
     });
   
-    /* Al cargar la pagina se pedirá permiso para saber la ubicación geografica del user */
+    /* When the website loads is going to ask the users to know their location*/
     var infoWindow = new google.maps.InfoWindow({map: map});
   
     // Try HTML5 geolocation.
@@ -42,7 +43,7 @@ initMap = () => {
       handleLocationError(false, infoWindow, map.getCenter());
     }
   
-    /* Al hacer click en el boton encuentrame se pedirá permiso para saber la ubicación geografica del user */
+    /* When you click on the find me button is going to ask for authorization to know the user's geographic location*/
     let latitud, longitud;
     let functionSuccess = (position) => {
       latitud = position.coords.latitude;
@@ -52,7 +53,7 @@ initMap = () => {
         lat: latitud,
         lng: longitud
       });
-      let myUbication = new google.maps.Marker({
+      let myLocation = new google.maps.Marker({
         position: {
           lat: latitud,
           lng: longitud,
@@ -76,9 +77,9 @@ initMap = () => {
     
     document.getElementById('find-me').addEventListener('click', search);
   
-    /* Se dibujará la ruta */
+    /* DRAW ROUTE */
     directionsDisplay.setMap(map);
-    // Autocompletar
+    // Autocomplete
     let startAutoComp = (document.getElementById('imp1'));
     let autocompliteStart = new google.maps.places.Autocomplete(startAutoComp);
     autocompliteStart.bindTo('bounds', map);
@@ -86,13 +87,13 @@ initMap = () => {
     let autocompliteEnd = new google.maps.places.Autocomplete(EndAutoComp);
     autocompliteEnd.bindTo('bounds', map);
   
-    /* Evento boton trazar ruta */
+    /* Button Event - Draw Route */
     document.getElementById('ruta').addEventListener('click', () => { 
       calculateAndDisplayRoute(directionsService, directionsDisplay);
     });
   };
   
-  /* Calcular la ruta */
+  /* Estimate the Route */
   function calculateAndDisplayRoute(directionsService, directionsDisplay) {
     directionsService.route({
       origin: document.getElementById('imp1').value,
@@ -107,7 +108,7 @@ initMap = () => {
     });
   }
   
-  /* Esta función mostrará un error si la geolocalización falló*/
+  /* This function is going to show an error in case the geo-location failed*/
   function handleLocationError(browserHasGeolocation, infoWindow, pos) {
     infoWindow.setPosition(pos);
     infoWindow.setContent(browserHasGeolocation ?
