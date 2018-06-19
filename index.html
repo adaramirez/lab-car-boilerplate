@@ -53,9 +53,9 @@
 
     <!-- SECTION ONE/START -->
     <!--DESKTOP VERSION -->
-    <section class="image-car image-main img-fluid" id="desktop-taxi">
+    <section class="image-car image-main img-fluid">
         <div class="container-fluid">
-            <div class="row hidden-xs">
+            <div id="desktop-taxi" class="row hidden-xs">
                 <div class="col-md-5 col-md-offset-7 pr-0 m-10">
                     <div class="orange panel-right-main">
                         <form action="">
@@ -91,9 +91,9 @@
 
     <!-- SECTION TWO / THE APP -->
     <!--DESKTOP VERSION-->
-    <section id="desktop-phone-image" class="orange">
+    <section class="orange">
         <div class="container-fluid">
-            <div class="row p-40 hidden-xs">
+            <div id="desktop-phone-image" class="row p-40 hidden-xs">
                 <div class="col-md-10 app-style">
                     <div class="col-md-5 m-10 p-10">
                         <img class="img-responsive" src="assets/images/iPhone6Plus.png" alt="iPhone">
@@ -125,7 +125,7 @@
     <!-- END SECTION TWO-->
 
     <!-- LOGIN BEGINS -->
-    <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+    <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" style="display: none;">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header bgc-green" align="center">
@@ -175,13 +175,13 @@
     <!-- REGISTER BEGINS-->
     <div class="">
         <div class="row">
-            <div class="modal fade" id="modal-register" tabindex="-1" role="dialog" aria-labelledby="modal-register-label" aria-hidden="true">
+            <div class="modal fade" id="modal-register" tabindex="-1" role="dialog" aria-labelledby="modal-register-label">
                 <div class="modal-dialog">
                     <div class="modal-content color-gray">
 
                         <div class="modal-header">
                             <button type="button" class="close" data-dismiss="modal">
-                                <span aria-hidden="true">×</span>
+                                <span>×</span>
                                 <span class="sr-only">Close</span>
                             </button>
                         </div>
@@ -340,21 +340,22 @@
                             </ul>
                         </div>
                         <div class="col-xs-6">
+                            <!-- For some reason the icons are not working -->
                             <div class="icons">
                                 <a href="">
-                                    <i class="fa fa-facebook" aria-hidden="false"></i>
+                                    <i class="fa fa-facebook"></i>
                                 </a>
                                 <a href="">
-                                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                                    <i class="fa fa-twitter"></i>
                                 </a>
                                 <a href="">
-                                    <i class="fa fa-linkedin" aria-hidden="true"></i>
+                                    <i class="fa fa-linkedin"></i>
                                 </a>
                                 <a href="">
-                                    <i class="fa fa-apple" aria-hidden="true"></i>
+                                    <i class="fa fa-apple"></i>
                                 </a>
                                 <a href="">
-                                    <i class="fa fa-play" aria-hidden="true"></i>
+                                    <i class="fa fa-play"></i>
                                 </a>
                             </div>
                             <div class="container-app">
@@ -374,19 +375,19 @@
                         <div class="col-sm-3 col-md-3 flex-end">
                             <div class="icons">
                                 <a href="">
-                                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                                    <i class="fa fa-facebook"></i>
                                 </a>
                                 <a href="">
-                                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                                    <i class="fa fa-twitter"></i>
                                 </a>
                                 <a href="">
-                                    <i class="fa fa-linkedin" aria-hidden="true"></i>
+                                    <i class="fa fa-linkedin"></i>
                                 </a>
                                 <a href="">
-                                    <i class="fa fa-apple" aria-hidden="true"></i>
+                                    <i class="fa fa-apple"></i>
                                 </a>
                                 <a href="">
-                                    <i class="fa fa-play" aria-hidden="true"></i>
+                                    <i class="fa fa-play"></i>
                                 </a>
                             </div>
                         </div>
@@ -468,14 +469,14 @@
         <!-- FOOTER ENDS -->
 
         <!-- BECOME A DRIVER MODAL -->
-        <div class="modal fade" id="driverModal" tabindex="-1" role="dialog" aria-labelledby="driverModalLabel" aria-hidden="true">
+        <div class="modal fade" id="driverModal" tabindex="-1" role="dialog" aria-labelledby="driverModalLabel">
             <div class="modal-dialog" role="document">
                 <div class="modal-content modalBecomeDriver">
                     <div class="modal-body">
                         <form>
                             <div class="form-group">
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
+                                    <span>&times;</span>
                                 </button>
                                 <p class="font-weight-bold">Do you have a four-door car?</p>
                                 <select class="form-control">
