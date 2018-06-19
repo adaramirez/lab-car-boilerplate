@@ -153,8 +153,14 @@ footer{
       color: #fff;
   }
 
-  .fa {
+  .fab {
       color: #fff;
+      margin-left: 8px;
+      margin-bottom: 20px;
+  }
+
+  .fa{
+      color:#fff;
       margin-left: 8px;
       margin-bottom: 20px;
   }
